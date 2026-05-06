@@ -1,0 +1,207 @@
+[
+  {
+    "id": "github",
+    "name": "GitHub",
+    "description": "Manage repositories, issues, pull requests, and code reviews.",
+    "category": "Developer Tools",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-github"],
+    "env": [
+      { "key": "GITHUB_PERSONAL_ACCESS_TOKEN", "required": true }
+    ],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "hue": 220,
+    "tags": ["git", "code", "vcs"]
+  },
+  {
+    "id": "gitlab",
+    "name": "GitLab",
+    "description": "Work with GitLab projects, merge requests, issues, and CI/CD pipelines.",
+    "category": "Developer Tools",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-gitlab"],
+    "env": [
+      { "key": "GITLAB_PERSONAL_ACCESS_TOKEN", "required": true },
+      { "key": "GITLAB_API_URL", "required": false, "description": "For self-hosted GitLab" }
+    ],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "hue": 25,
+    "tags": ["git", "code", "vcs", "ci-cd"]
+  },
+  {
+    "id": "playwright",
+    "name": "Playwright",
+    "description": "Browser automation for web testing, scraping, and UI interactions.",
+    "category": "Developer Tools",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@playwright/mcp"],
+    "vendor_url": "https://github.com/microsoft/playwright-mcp",
+    "hue": 145,
+    "tags": ["browser", "automation", "testing"]
+  },
+  {
+    "id": "filesystem",
+    "name": "Filesystem",
+    "description": "Read and write files on agent machines with configurable path restrictions.",
+    "category": "Developer Tools",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "hue": 195,
+    "tags": ["files", "storage", "io"]
+  },
+  {
+    "id": "postgres",
+    "name": "PostgreSQL",
+    "description": "Query databases, inspect schemas, and manage PostgreSQL instances.",
+    "category": "Data",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-postgres"],
+    "env": [
+      { "key": "DATABASE_URL", "required": true, "description": "postgres://user:pass@host/db" }
+    ],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "hue": 205,
+    "tags": ["database", "sql", "postgres"]
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "description": "Read channels, post messages, search history, and manage workspace resources.",
+    "category": "Productivity",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-slack"],
+    "env": [
+      { "key": "SLACK_BOT_TOKEN", "required": true },
+      { "key": "SLACK_TEAM_ID", "required": true }
+    ],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "hue": 270,
+    "tags": ["messaging", "collaboration", "chat"]
+  },
+  {
+    "id": "linear",
+    "name": "Linear",
+    "description": "Create and manage issues, projects, sprints, and team workflows.",
+    "category": "Productivity",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-linear"],
+    "env": [
+      { "key": "LINEAR_API_KEY", "required": true }
+    ],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "hue": 245,
+    "tags": ["project-management", "issues", "sprints"]
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "description": "Read and update Notion pages, databases, and workspace content.",
+    "category": "Productivity",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@notionhq/notion-mcp-server"],
+    "env": [
+      { "key": "NOTION_API_KEY", "required": true }
+    ],
+    "vendor_url": "https://github.com/modelcontextprotocol/notion-mcp-server",
+    "hue": 30,
+    "tags": ["notes", "wiki", "knowledge-base"]
+  },
+  {
+    "id": "jira",
+    "name": "Jira",
+    "description": "Create issues, manage sprints, query projects, and update Jira boards.",
+    "category": "Productivity",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "mcp-jira"],
+    "env": [
+      { "key": "JIRA_API_TOKEN", "required": true },
+      { "key": "JIRA_BASE_URL", "required": true, "description": "https://your-org.atlassian.net" },
+      { "key": "JIRA_USER_EMAIL", "required": true }
+    ],
+    "hue": 215,
+    "tags": ["project-management", "issues", "atlassian"]
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "description": "Access Figma files, components, design tokens, and export assets.",
+    "category": "Design",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "figma-mcp"],
+    "env": [
+      { "key": "FIGMA_ACCESS_TOKEN", "required": true }
+    ],
+    "vendor_url": "https://github.com/figma/figma-developer-mcp",
+    "hue": 15,
+    "tags": ["design", "ui", "assets"]
+  },
+  {
+    "id": "aws",
+    "name": "AWS",
+    "description": "Interact with AWS services including S3, EC2, Lambda, and CloudWatch.",
+    "category": "Cloud",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@aws-labs/aws-mcp-servers"],
+    "env": [
+      { "key": "AWS_ACCESS_KEY_ID", "required": true },
+      { "key": "AWS_SECRET_ACCESS_KEY", "required": true },
+      { "key": "AWS_REGION", "required": true }
+    ],
+    "vendor_url": "https://github.com/awslabs/mcp",
+    "hue": 35,
+    "tags": ["cloud", "infrastructure", "aws"]
+  },
+  {
+    "id": "terraform",
+    "name": "Terraform",
+    "description": "Plan, apply, and manage Terraform infrastructure as code.",
+    "category": "Cloud",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-terraform"],
+    "env": [
+      { "key": "TF_TOKEN", "required": false, "description": "For Terraform Cloud" }
+    ],
+    "hue": 285,
+    "tags": ["infrastructure", "iac", "devops"]
+  },
+  {
+    "id": "context7",
+    "name": "Context7",
+    "description": "Retrieve up-to-date library docs and code examples for AI agents.",
+    "category": "AI Tools",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@upstash/context7-mcp"],
+    "vendor_url": "https://context7.com",
+    "hue": 180,
+    "tags": ["docs", "ai", "search"]
+  },
+  {
+    "id": "greptile",
+    "name": "Greptile",
+    "description": "Semantic code search and analysis across your repositories.",
+    "category": "AI Tools",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "greptile-mcp"],
+    "env": [
+      { "key": "GREPTILE_API_KEY", "required": true }
+    ],
+    "vendor_url": "https://greptile.com",
+    "hue": 160,
+    "tags": ["code-search", "ai", "analysis"]
+  }
+]

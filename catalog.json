@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "categories": [
+    { "id": "mcp-servers", "label": "MCP Servers", "path": "mcp-servers/catalog.json" },
+    { "id": "skills",      "label": "Skills",      "path": "skills/catalog.json" },
+    { "id": "rules",       "label": "Rules",        "path": "rules/catalog.json" },
+    { "id": "policies",    "label": "Policies",     "path": "policies/catalog.json" }
+  ]
+}
