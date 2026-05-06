@@ -1,1 +1,102 @@
-[]
+[
+  {
+    "id": "claude-code-best-practices",
+    "name": "Claude Code Best Practices",
+    "description": "Opinionated CLAUDE.md covering commit hygiene, tool use etiquette, and context-window discipline.",
+    "kind": "claude_md",
+    "category": "Development",
+    "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "hue": 215,
+    "tags": ["claude", "productivity", "workflow"]
+  },
+  {
+    "id": "agents-md-standard",
+    "name": "Agents.md Standard",
+    "description": "Shared AGENTS.md template for teams using Codex and other multi-agent systems. Covers tool permissions, context length, and escalation paths.",
+    "kind": "agents_md",
+    "category": "Development",
+    "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "hue": 265,
+    "tags": ["codex", "agents", "template"]
+  },
+  {
+    "id": "cursor-rules-typescript",
+    "name": "Cursor Rules — TypeScript",
+    "description": "Cursor rules tuned for TypeScript monorepos: strict imports, no `any`, prefer `unknown`, and consistent error patterns.",
+    "kind": "cursor_rules",
+    "category": "Language",
+    "vendor_url": "https://cursor.directory",
+    "hue": 190,
+    "tags": ["typescript", "cursor", "linting"]
+  },
+  {
+    "id": "cursor-rules-go",
+    "name": "Cursor Rules — Go",
+    "description": "Cursor rules for idiomatic Go: error wrapping, context threading, table-driven tests, and no global state.",
+    "kind": "cursor_rules",
+    "category": "Language",
+    "vendor_url": "https://cursor.directory",
+    "hue": 175,
+    "tags": ["go", "golang", "cursor"]
+  },
+  {
+    "id": "cursor-rules-react",
+    "name": "Cursor Rules — React / TanStack",
+    "description": "Cursor rules for React + TanStack Router: semantic tokens, no inline styles, Combobox over select, and accessible forms.",
+    "kind": "cursor_rules",
+    "category": "Frontend",
+    "vendor_url": "https://cursor.directory",
+    "hue": 200,
+    "tags": ["react", "tanstack", "cursor", "frontend"]
+  },
+  {
+    "id": "security-guidelines",
+    "name": "Security Guidelines",
+    "description": "Shared CLAUDE.md section covering OWASP Top 10 prevention: no SQL interpolation, no secrets in logs, input validation at boundaries.",
+    "kind": "claude_md",
+    "category": "Security",
+    "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "hue": 0,
+    "tags": ["security", "owasp", "guidelines"]
+  },
+  {
+    "id": "git-commit-conventions",
+    "name": "Git Commit Conventions",
+    "description": "Conventional Commits skill for AI agents: feat/fix/chore prefixes, scoped commits, and co-authored-by footers.",
+    "kind": "skill",
+    "category": "Development",
+    "vendor_url": "https://www.conventionalcommits.org",
+    "hue": 140,
+    "tags": ["git", "commits", "conventions"]
+  },
+  {
+    "id": "code-review-checklist",
+    "name": "Code Review Checklist",
+    "description": "Rules file instructing AI to review for security loopholes, edge cases, bypass paths, breaking points, and scalability.",
+    "kind": "rules",
+    "category": "Development",
+    "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "hue": 45,
+    "tags": ["code-review", "quality", "rules"]
+  },
+  {
+    "id": "api-design-rules",
+    "name": "API Design Rules",
+    "description": "REST API design rules: consistent error envelope, pagination via cursor, idempotency keys, and HTTP status discipline.",
+    "kind": "rules",
+    "category": "Development",
+    "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "hue": 230,
+    "tags": ["api", "rest", "design"]
+  },
+  {
+    "id": "database-migration-rules",
+    "name": "Database Migration Rules",
+    "description": "Rules for safe schema changes: expand-contract, backward compatibility, index before merge, and no IF NOT EXISTS outside baseline.",
+    "kind": "rules",
+    "category": "Infrastructure",
+    "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "hue": 30,
+    "tags": ["database", "migrations", "schema"]
+  }
+]
