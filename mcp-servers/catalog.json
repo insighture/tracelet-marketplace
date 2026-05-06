@@ -10,7 +10,7 @@
     "env": [
       { "key": "GITHUB_PERSONAL_ACCESS_TOKEN", "required": true }
     ],
-    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
     "hue": 220,
     "tags": ["git", "code", "vcs"]
   },
@@ -24,9 +24,9 @@
     "args": ["-y", "@modelcontextprotocol/server-gitlab"],
     "env": [
       { "key": "GITLAB_PERSONAL_ACCESS_TOKEN", "required": true },
-      { "key": "GITLAB_API_URL", "required": false, "description": "For self-hosted GitLab" }
+      { "key": "GITLAB_API_URL", "required": false, "description": "For self-hosted GitLab, e.g. https://gitlab.example.com/api/v4" }
     ],
-    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab",
     "hue": 25,
     "tags": ["git", "code", "vcs", "ci-cd"]
   },
@@ -45,27 +45,24 @@
   {
     "id": "filesystem",
     "name": "Filesystem",
-    "description": "Read and write files on agent machines with configurable path restrictions.",
+    "description": "Read and write files on the local machine with configurable path restrictions. Specify allowed directories in args.",
     "category": "Developer Tools",
     "transport": "stdio",
     "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"],
-    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/USERNAME/projects"],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
     "hue": 195,
     "tags": ["files", "storage", "io"]
   },
   {
     "id": "postgres",
     "name": "PostgreSQL",
-    "description": "Query databases, inspect schemas, and manage PostgreSQL instances.",
+    "description": "Query databases, inspect schemas, and manage PostgreSQL instances. The connection string is passed as a CLI argument.",
     "category": "Data",
     "transport": "stdio",
     "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-postgres"],
-    "env": [
-      { "key": "DATABASE_URL", "required": true, "description": "postgres://user:pass@host/db" }
-    ],
-    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://user:pass@host/dbname"],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
     "hue": 205,
     "tags": ["database", "sql", "postgres"]
   },
@@ -78,27 +75,12 @@
     "command": "npx",
     "args": ["-y", "@modelcontextprotocol/server-slack"],
     "env": [
-      { "key": "SLACK_BOT_TOKEN", "required": true },
-      { "key": "SLACK_TEAM_ID", "required": true }
+      { "key": "SLACK_BOT_TOKEN", "required": true, "description": "Bot token starting with xoxb-" },
+      { "key": "SLACK_TEAM_ID", "required": true, "description": "Workspace ID from Slack admin" }
     ],
-    "vendor_url": "https://github.com/modelcontextprotocol/servers",
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
     "hue": 270,
     "tags": ["messaging", "collaboration", "chat"]
-  },
-  {
-    "id": "linear",
-    "name": "Linear",
-    "description": "Create and manage issues, projects, sprints, and team workflows.",
-    "category": "Productivity",
-    "transport": "stdio",
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-linear"],
-    "env": [
-      { "key": "LINEAR_API_KEY", "required": true }
-    ],
-    "vendor_url": "https://github.com/modelcontextprotocol/servers",
-    "hue": 245,
-    "tags": ["project-management", "issues", "sprints"]
   },
   {
     "id": "notion",
@@ -109,27 +91,50 @@
     "command": "npx",
     "args": ["-y", "@notionhq/notion-mcp-server"],
     "env": [
-      { "key": "NOTION_API_KEY", "required": true }
+      { "key": "OPENAPI_MCP_HEADERS", "required": true, "description": "JSON string: {\"Authorization\": \"Bearer secret_...\", \"Notion-Version\": \"2022-06-28\"}" }
     ],
-    "vendor_url": "https://github.com/modelcontextprotocol/notion-mcp-server",
+    "vendor_url": "https://github.com/makenotion/notion-mcp-server",
     "hue": 30,
     "tags": ["notes", "wiki", "knowledge-base"]
   },
   {
-    "id": "jira",
-    "name": "Jira",
-    "description": "Create issues, manage sprints, query projects, and update Jira boards.",
-    "category": "Productivity",
+    "id": "brave-search",
+    "name": "Brave Search",
+    "description": "Web and local search via the Brave Search API. Useful for grounding agents with current information.",
+    "category": "AI Tools",
     "transport": "stdio",
     "command": "npx",
-    "args": ["-y", "mcp-jira"],
+    "args": ["-y", "@modelcontextprotocol/server-brave-search"],
     "env": [
-      { "key": "JIRA_API_TOKEN", "required": true },
-      { "key": "JIRA_BASE_URL", "required": true, "description": "https://your-org.atlassian.net" },
-      { "key": "JIRA_USER_EMAIL", "required": true }
+      { "key": "BRAVE_API_KEY", "required": true, "description": "Get a free key at brave.com/search/api" }
     ],
-    "hue": 215,
-    "tags": ["project-management", "issues", "atlassian"]
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+    "hue": 12,
+    "tags": ["search", "web", "ai"]
+  },
+  {
+    "id": "fetch",
+    "name": "Fetch",
+    "description": "Retrieve content from any URL — web pages, REST APIs, JSON feeds. No auth required.",
+    "category": "Developer Tools",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-fetch"],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+    "hue": 160,
+    "tags": ["http", "web", "api"]
+  },
+  {
+    "id": "memory",
+    "name": "Memory",
+    "description": "Persistent in-session key-value memory. Lets agents store and recall facts across a conversation.",
+    "category": "AI Tools",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-memory"],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "hue": 55,
+    "tags": ["memory", "state", "ai"]
   },
   {
     "id": "figma",
@@ -138,44 +143,13 @@
     "category": "Design",
     "transport": "stdio",
     "command": "npx",
-    "args": ["-y", "figma-mcp"],
+    "args": ["-y", "figma-developer-mcp", "--figma-api-key=${FIGMA_ACCESS_TOKEN}", "--stdio"],
     "env": [
-      { "key": "FIGMA_ACCESS_TOKEN", "required": true }
+      { "key": "FIGMA_ACCESS_TOKEN", "required": true, "description": "Personal access token from Figma account settings" }
     ],
     "vendor_url": "https://github.com/figma/figma-developer-mcp",
     "hue": 15,
     "tags": ["design", "ui", "assets"]
-  },
-  {
-    "id": "aws",
-    "name": "AWS",
-    "description": "Interact with AWS services including S3, EC2, Lambda, and CloudWatch.",
-    "category": "Cloud",
-    "transport": "stdio",
-    "command": "npx",
-    "args": ["-y", "@aws-labs/aws-mcp-servers"],
-    "env": [
-      { "key": "AWS_ACCESS_KEY_ID", "required": true },
-      { "key": "AWS_SECRET_ACCESS_KEY", "required": true },
-      { "key": "AWS_REGION", "required": true }
-    ],
-    "vendor_url": "https://github.com/awslabs/mcp",
-    "hue": 35,
-    "tags": ["cloud", "infrastructure", "aws"]
-  },
-  {
-    "id": "terraform",
-    "name": "Terraform",
-    "description": "Plan, apply, and manage Terraform infrastructure as code.",
-    "category": "Cloud",
-    "transport": "stdio",
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-terraform"],
-    "env": [
-      { "key": "TF_TOKEN", "required": false, "description": "For Terraform Cloud" }
-    ],
-    "hue": 285,
-    "tags": ["infrastructure", "iac", "devops"]
   },
   {
     "id": "context7",
@@ -190,18 +164,27 @@
     "tags": ["docs", "ai", "search"]
   },
   {
-    "id": "greptile",
-    "name": "Greptile",
-    "description": "Semantic code search and analysis across your repositories.",
+    "id": "sequential-thinking",
+    "name": "Sequential Thinking",
+    "description": "Structured multi-step reasoning tool. Helps agents break complex problems into chains of thought.",
     "category": "AI Tools",
     "transport": "stdio",
     "command": "npx",
-    "args": ["-y", "greptile-mcp"],
-    "env": [
-      { "key": "GREPTILE_API_KEY", "required": true }
-    ],
-    "vendor_url": "https://greptile.com",
-    "hue": 160,
-    "tags": ["code-search", "ai", "analysis"]
+    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+    "hue": 240,
+    "tags": ["reasoning", "ai", "planning"]
+  },
+  {
+    "id": "puppeteer",
+    "name": "Puppeteer",
+    "description": "Headless Chrome automation for screenshots, form fills, and scraping dynamic web pages.",
+    "category": "Developer Tools",
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+    "vendor_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "hue": 130,
+    "tags": ["browser", "automation", "scraping"]
   }
 ]
