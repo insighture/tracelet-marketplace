@@ -6,6 +6,7 @@
     "kind": "claude_md",
     "category": "Development",
     "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/claude-code-best-practices.md",
     "hue": 215,
     "tags": ["claude", "productivity", "workflow"]
   },
@@ -16,6 +17,7 @@
     "kind": "agents_md",
     "category": "Development",
     "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/agents-md-standard.md",
     "hue": 265,
     "tags": ["codex", "agents", "template"]
   },
@@ -26,6 +28,7 @@
     "kind": "cursor_rules",
     "category": "Language",
     "vendor_url": "https://cursor.directory",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/cursor-rules-typescript.md",
     "hue": 190,
     "tags": ["typescript", "cursor", "linting"]
   },
@@ -36,6 +39,7 @@
     "kind": "cursor_rules",
     "category": "Language",
     "vendor_url": "https://cursor.directory",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/cursor-rules-go.md",
     "hue": 175,
     "tags": ["go", "golang", "cursor"]
   },
@@ -46,6 +50,7 @@
     "kind": "cursor_rules",
     "category": "Frontend",
     "vendor_url": "https://cursor.directory",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/cursor-rules-react.md",
     "hue": 200,
     "tags": ["react", "tanstack", "cursor", "frontend"]
   },
@@ -56,6 +61,7 @@
     "kind": "claude_md",
     "category": "Security",
     "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/security-guidelines.md",
     "hue": 0,
     "tags": ["security", "owasp", "guidelines"]
   },
@@ -66,6 +72,7 @@
     "kind": "skill",
     "category": "Development",
     "vendor_url": "https://www.conventionalcommits.org",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/git-commit-conventions.md",
     "hue": 140,
     "tags": ["git", "commits", "conventions"]
   },
@@ -76,6 +83,7 @@
     "kind": "rules",
     "category": "Development",
     "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/code-review-checklist.md",
     "hue": 45,
     "tags": ["code-review", "quality", "rules"]
   },
@@ -86,6 +94,7 @@
     "kind": "rules",
     "category": "Development",
     "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/api-design-rules.md",
     "hue": 230,
     "tags": ["api", "rest", "design"]
   },
@@ -96,7 +105,140 @@
     "kind": "rules",
     "category": "Infrastructure",
     "vendor_url": "https://github.com/insighture/tracelet-marketplace",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/database-migration-rules.md",
     "hue": 30,
     "tags": ["database", "migrations", "schema"]
+  },
+  {
+    "id": "tdd-superpowers",
+    "name": "Test-Driven Development",
+    "description": "Red-green-refactor discipline for AI agents: write failing test first, implement minimally, refactor cleanly.",
+    "kind": "skill",
+    "category": "Development",
+    "vendor_url": "https://github.com/obra/superpowers",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/tdd-superpowers.md",
+    "hue": 120,
+    "tags": ["tdd", "testing", "quality"]
+  },
+  {
+    "id": "systematic-debugging",
+    "name": "Systematic Debugging",
+    "description": "Structured debugging protocol for AI agents: reproduce → isolate → hypothesize → verify. Prevents shotgun fixes.",
+    "kind": "skill",
+    "category": "Development",
+    "vendor_url": "https://github.com/obra/superpowers",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/systematic-debugging.md",
+    "hue": 35,
+    "tags": ["debugging", "quality", "workflow"]
+  },
+  {
+    "id": "security-review-tob",
+    "name": "Security Review (Trail of Bits)",
+    "description": "Trail of Bits security review skill: threat modelling, vulnerability classes, and remediation patterns.",
+    "kind": "skill",
+    "category": "Security",
+    "vendor_url": "https://github.com/trailofbits/skills",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/security-review-tob.md",
+    "hue": 5,
+    "tags": ["security", "review", "appsec", "trailofbits"]
+  },
+  {
+    "id": "claude-code-security-review",
+    "name": "Claude Code Security Review",
+    "description": "Official Anthropic security review skill for Claude Code: OWASP checks, secret detection, and auth review.",
+    "kind": "skill",
+    "category": "Security",
+    "vendor_url": "https://github.com/anthropics/claude-code-security-review",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/claude-code-security-review.md",
+    "hue": 10,
+    "tags": ["security", "claude-code", "official", "anthropic"]
+  },
+  {
+    "id": "spec-workflow",
+    "name": "Spec Workflow",
+    "description": "Structured spec-first development: requirements → design → implementation → review checklist.",
+    "kind": "skill",
+    "category": "Development",
+    "vendor_url": "https://github.com/Pimzino/claude-code-spec-workflow",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/spec-workflow.md",
+    "hue": 200,
+    "tags": ["spec", "planning", "workflow", "requirements"]
+  },
+  {
+    "id": "software-architect",
+    "name": "Software Architect",
+    "description": "System design skill: trade-off analysis, ADR generation, scalability review, and component diagrams.",
+    "kind": "skill",
+    "category": "Architecture",
+    "vendor_url": "https://github.com/alirezarezvani/claude-skills",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/software-architect.md",
+    "hue": 260,
+    "tags": ["architecture", "design", "adr", "system-design"]
+  },
+  {
+    "id": "code-reviewer",
+    "name": "Code Reviewer",
+    "description": "Structured code review skill: correctness, security, performance, style, and test coverage checklist.",
+    "kind": "skill",
+    "category": "Development",
+    "vendor_url": "https://github.com/alirezarezvani/claude-skills",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/code-reviewer.md",
+    "hue": 45,
+    "tags": ["code-review", "quality", "review"]
+  },
+  {
+    "id": "hashicorp-terraform",
+    "name": "HashiCorp Terraform Skills",
+    "description": "Terraform best practices: module structure, state management, provider patterns, and security hardening.",
+    "kind": "skill",
+    "category": "Infrastructure",
+    "vendor_url": "https://github.com/hashicorp/agent-skills",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/hashicorp-terraform.md",
+    "hue": 100,
+    "tags": ["terraform", "infrastructure", "hashicorp", "iac"]
+  },
+  {
+    "id": "composio-content-research-writer",
+    "name": "Content Research Writer",
+    "description": "Research-backed writing partner: outlines, citations, hooks, section feedback, and voice preservation.",
+    "kind": "skill",
+    "category": "Writing",
+    "vendor_url": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/content-research-writer",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/composio-content-research-writer.md",
+    "hue": 140,
+    "tags": ["writing", "research", "content", "citations"]
+  },
+  {
+    "id": "composio-changelog-generator",
+    "name": "Changelog Generator",
+    "description": "Generates structured changelogs from git history, PR descriptions, and commit messages.",
+    "kind": "skill",
+    "category": "Development",
+    "vendor_url": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/changelog-generator",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/composio-changelog-generator.md",
+    "hue": 215,
+    "tags": ["changelog", "git", "releases", "documentation"]
+  },
+  {
+    "id": "composio-meeting-insights-analyzer",
+    "name": "Meeting Insights Analyzer",
+    "description": "Extracts action items, decisions, and key insights from meeting transcripts and notes.",
+    "kind": "skill",
+    "category": "Productivity",
+    "vendor_url": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/meeting-insights-analyzer",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/composio-meeting-insights-analyzer.md",
+    "hue": 45,
+    "tags": ["meetings", "productivity", "notes", "action-items"]
+  },
+  {
+    "id": "composio-tailored-resume-generator",
+    "name": "Tailored Resume Generator",
+    "description": "Customizes resumes for specific job descriptions, highlighting relevant experience and keywords.",
+    "kind": "skill",
+    "category": "HR",
+    "vendor_url": "https://github.com/ComposioHQ/awesome-claude-skills/tree/master/tailored-resume-generator",
+    "content_url": "https://raw.githubusercontent.com/insighture/tracelet-marketplace/main/skills/composio-tailored-resume-generator.md",
+    "hue": 20,
+    "tags": ["hr", "resume", "recruiting", "career"]
   }
 ]
